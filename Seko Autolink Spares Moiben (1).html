@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seko Autolink Spares Moiben</title>
+<style>
+:root{--bg:#f4f5f7;--card:#fff;--text:#1b1f27;--muted:#6b7280;--line:#e2e5ea;--brand:#f68b1e;--ok:#2b8a3e;--warn:#e67700;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14161a;--card:#1e2128;--text:#eceef2;--muted:#9aa1ad;--line:#2d313a;--ok:#51cf66;--warn:#fcc419}}
+:root[data-theme="dark"]{--bg:#14161a;--card:#1e2128;--text:#eceef2;--muted:#9aa1ad;--line:#2d313a;--ok:#51cf66;--warn:#fcc419}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body:not(.admin) .adm-only,body:not(.admin) .am,body:not(.admin) .s{display:none!important}
+header{background:var(--brand);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+header h1{margin:0;font-size:18px}
+.tag{background:rgba(0,0,0,.25);padding:3px 10px;border-radius:99px;font-size:12px}
+main{max-width:960px;margin:0 auto;padding:14px;display:grid;gap:14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.stat,.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.stat b{display:block;font-size:19px;margin-top:2px}
+.stat span{color:var(--muted);font-size:12px}
+h2{margin:0 0 10px;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+label.f{display:grid;gap:4px;font-size:12px;color:var(--muted)}
+input,select{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--text);font-size:15px}
+button{cursor:pointer;border:0;border-radius:8px;padding:10px 16px;font-size:15px;background:var(--brand);color:#fff}
+button:disabled{opacity:.5}
+button.s{padding:5px 9px;font-size:12px;background:var(--line);color:var(--text)}
+.tot{align-self:end;font-weight:600;padding:10px 0}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:680px}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);font-size:14px;white-space:nowrap}
+th{color:var(--muted);font-size:12px}
+.pill{padding:2px 8px;border-radius:99px;font-size:12px;color:#fff;cursor:pointer}
+.Paid{background:var(--ok)}.Pending{background:var(--warn)}
+.empty{color:var(--muted);text-align:center;padding:16px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.chart{display:flex;align-items:flex-end;gap:6px;height:150px}
+.bar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;font-size:11px;color:var(--muted)}
+.bar i{display:block;width:100%;background:var(--brand);border-radius:4px 4px 0 0;min-height:2px;margin-bottom:4px}
+.row,.prod{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.badge{font-size:12px;padding:2px 8px;border-radius:99px;color:#fff}.in{background:var(--ok)}.out{background:#e03131}
+.hb{padding:5px 10px;font-size:12px;background:rgba(0,0,0,.25);color:#fff}
+.shop{padding:12px 14px;border-radius:12px;font-weight:600;color:#fff;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}.shop.on{background:var(--ok)}.shop.off{background:#e03131}.shop small{font-weight:400}
+input[type=checkbox]{width:auto;padding:0}
+#chatBtn{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));height:52px;min-width:52px;border-radius:26px;padding:0 14px;font-size:22px;box-shadow:0 2px 10px rgba(0,0,0,.3);z-index:20}#chatBox{position:fixed;right:14px;bottom:calc(76px + env(safe-area-inset-bottom,0px));width:min(340px,calc(100vw - 28px));display:none;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:12px;z-index:20;overflow:hidden}#chatBox.on{display:flex}#chatHead{background:var(--brand);color:#fff;padding:10px 12px;font-weight:600;display:flex;justify-content:space-between;align-items:center}#chatMsgs{overflow-y:auto;padding:10px;min-height:160px;max-height:45vh}.m{max-width:80%;padding:6px 10px;border-radius:10px;margin:4px 0;font-size:14px;background:var(--line);word-wrap:break-word}.m.me{margin-left:auto;background:var(--brand);color:#fff}#chatForm{display:flex;gap:6px;padding:8px;border-top:1px solid var(--line)}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}.modal.on{display:flex}.modal .card{width:100%;max-width:320px}
+</style>
+</head>
+<body>
+<header><h1>🔧 Seko Autolink Spares Moiben</h1><span style="display:flex;gap:8px;align-items:center"><span id="role" class="tag">Loading…</span><button id="lg" class="hb">Login</button></span></header>
+<main>
+<div id="note" class="card" style="display:none"></div>
+<div id="shopbar" class="shop off" style="display:none"></div>
+<div class="card adm-only"><details><summary style="cursor:pointer;color:var(--brand)">Shop hours &amp; status (admin)</summary>
+<div class="grid" style="margin-top:10px">
+<label class="f">Opening time<input id="ho" type="time" value="08:00"></label>
+<label class="f">Closing time<input id="hc" type="time" value="18:00"></label>
+<label class="f">Status<select id="hm"><option value="auto">Automatic (by hours)</option><option value="open">Force open now</option><option value="closed">Force closed now</option></select></label>
+</div><p><button id="hs">Save hours</button></p></details></div>
+
+<div class="card adm-only" id="imp" style="display:none"><h2>Import saved data</h2><p id="impt" style="margin:0 0 10px"></p><button id="impb">Import into shared database</button></div>
+
+<div class="stats adm-only">
+<div class="stat"><span>Today's sales</span><b id="sToday">0</b></div>
+<div class="stat"><span>Total sales</span><b id="sTotal">0</b></div>
+<div class="stat"><span>Orders</span><b id="sCount">0</b></div>
+<div class="stat"><span>Unpaid</span><b id="sUnpaid">0</b></div>
+<div class="stat"><span>Total profit</span><b id="sProfit">0</b></div>
+<div class="stat"><span>Today's profit</span><b id="sTProfit">0</b></div>
+<div class="stat"><span>Items sold</span><b id="sItems">0</b></div>
+</div>
+<div class="two adm-only">
+<div class="card"><h2>Sales: last 7 days</h2><div id="chart" class="chart"></div></div>
+<div class="card"><h2>Top selling parts</h2><div id="top"></div></div>
+</div>
+
+<div class="card adm-only">
+<h2>New spare part order</h2>
+<div class="grid">
+<label class="f">Spare part name<input id="part" list="plist" placeholder="e.g. Brake pads"></label>
+<label class="f">Part no. (optional)<input id="pno"></label>
+<label class="f">Customer<input id="cust"></label>
+<label class="f">Phone<input id="ph" type="tel"></label>
+<label class="f">Quantity<input id="qty" type="number" min="1" value="1"></label>
+<label class="f">Buying price (unit)<input id="bp" type="number" min="0" step="any" placeholder="0"></label>
+<label class="f">Selling price (unit)<input id="price" type="number" min="0" step="any" placeholder="0"></label>
+<label class="f">Payment<select id="pay"><option>Paid</option><option>Pending</option></select></label>
+<div class="tot">Total: <span id="tot">0</span><br>Profit: <span id="prf">0</span></div>
+</div>
+<p style="margin:12px 0 0"><button id="add">Save order</button> <span id="msg" style="color:var(--warn);font-size:13px"></span></p>
+</div>
+
+<div class="card">
+<h2>🔍 Find a spare part</h2>
+<input id="pq" placeholder="Search by part name or part number…">
+<datalist id="plist"></datalist>
+<div id="pres" style="margin-top:6px"></div>
+<details id="mg" class="adm-only" style="margin-top:12px"><summary style="cursor:pointer;color:var(--brand)">Manage products (admin)</summary>
+<div class="grid" style="margin-top:10px">
+<label class="f">Part name<input id="cn"></label>
+<label class="f">Part no.<input id="cp"></label>
+<label class="f">Buying price<input id="cb" type="number" min="0" step="any"></label>
+<label class="f">Selling price<input id="cpr" type="number" min="0" step="any"></label>
+<label class="f">In stock<input id="cs" type="number" min="0" value="1"></label>
+</div>
+<p><button id="cadd">Add product</button></p></details>
+</div>
+
+<div class="card"><h2>💳 Lipa Polepole</h2><p style="margin:0 0 10px;color:var(--muted)">Pay a deposit, take your part or installation, then pay the rest slowly. Enter the code the shop gave you to check your balance.</p>
+<div style="display:flex;gap:8px"><input id="lc" placeholder="Your code, e.g. K7M2QX" style="text-transform:uppercase"><button id="lcb">Check</button></div><div id="lres" style="margin-top:10px"></div><div id="lpay" style="margin-top:8px;color:var(--muted);font-size:13px"></div></div>
+
+<div class="card"><h2>🧰 Fundis available at the shop</h2><div id="fl"><div class="empty">No fundis listed yet</div></div>
+<details id="fm" class="adm-only" style="margin-top:12px"><summary style="cursor:pointer;color:var(--brand)">Manage fundis (admin)</summary>
+<div class="grid" style="margin-top:10px">
+<label class="f">Fundi name<input id="fn"></label>
+<label class="f">Phone number<input id="fp" type="tel" placeholder="07..."></label>
+<label class="f">Speciality (optional)<input id="fs" placeholder="e.g. Engine, brakes"></label>
+</div><p><button id="fadd">Add fundi</button></p></details></div>
+
+<div class="card"><h2>📣 Live activity <button class="s" id="aclr" style="float:right">Clear all</button></h2><div id="act"><div class="empty">Nothing yet</div></div></div>
+
+<div class="card adm-only"><h2>💬 Customer messages</h2><p id="msgSum" style="margin:0 0 10px">No messages yet.</p><button id="msgOpen">Open messages</button></div>
+
+<div class="card adm-only"><h2>💳 Lipa Polepole plans</h2>
+<div class="grid"><label class="f">Client name<input id="ln"></label><label class="f">Phone<input id="lph" type="tel"></label><label class="f">Item / installation<input id="li"></label><label class="f">Total price<input id="lt" type="number" min="0" step="any"></label><label class="f">Deposit paid now<input id="ld" type="number" min="0" step="any" value="0"></label></div>
+<p><button id="ladd">Create plan</button></p>
+<label class="f" style="margin:8px 0">How clients should pay (shown to clients)<input id="lhow" placeholder="e.g. M-Pesa Till 123456, Seko Autolink"></label><button class="s" id="lhowb">Save payment info</button>
+<div class="scroll" style="margin-top:10px"><table><thead><tr><th>Code</th><th>Client</th><th>Item</th><th>Total</th><th>Paid</th><th>Balance</th><th></th></tr></thead><tbody id="lrows"></tbody></table></div></div>
+
+<div class="card adm-only">
+<h2>Sales records</h2>
+<input id="q" placeholder="Search part, customer or phone…" style="margin-bottom:10px">
+<p style="margin:0 0 10px"><button class="s" id="dsel">Delete selected</button> <button class="s" id="dall">Delete all records</button></p>
+<div class="scroll"><table>
+<thead><tr><th><input type="checkbox" id="selall"></th><th>Date</th><th>Spare part</th><th>Customer</th><th>Qty</th><th>Unit</th><th>Total</th><th>Profit</th><th>Status</th><th></th></tr></thead>
+<tbody id="rows"></tbody>
+</table></div>
+</div>
+</main>
+<div class="modal" id="pwm"><div class="card"><h2>Admin login</h2><input id="pw" type="password" placeholder="Password" autocomplete="current-password"><p id="pwe" style="color:#e03131;font-size:13px;margin:8px 0 0"></p><p style="margin:10px 0 0;display:flex;gap:8px"><button id="pwgo">Login</button><button id="pwx" class="hb" style="background:var(--line);color:var(--text)">Cancel</button></p></div></div>
+<button id="chatBtn" title="Chat with the shop">💬</button>
+<div id="chatBox"><div id="chatHead"><span id="chatTitle">Chat with the shop</span><span><button class="hb" id="chatBack" style="display:none">‹ Back</button> <button class="hb" id="chatX">✕</button></span></div>
+<div id="chatList" style="display:none;overflow-y:auto;max-height:50vh"></div>
+<div id="chatName" style="padding:8px;display:none"><input id="chatNm" placeholder="Your name"></div>
+<div id="chatMsgs"></div>
+<div id="chatForm"><input id="chatIn" placeholder="Type a message…"><button id="chatSend">Send</button></div></div>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const cur="KSh";
+const fmt=n=>cur+" "+Number(n||0).toLocaleString(undefined,{maximumFractionDigits:2});
+let db=null,isAdmin=false,canAdmin=false,fundis=[],editF=null,hours=null,prods=[],orders=[],costs={},editId=null;
+const msg=t=>$("msg").textContent=t;
+const fail=e=>{$("note").style.display="block";$("note").textContent="Could not load live data ("+((e&&e.code)||"error")+"). Please reload."};
+const act=t=>db.collection("activity").add({text:t,at:Date.now()}).catch(()=>{});
+
+async function init(){
+ try{
+  const user=window.claude?await claude.use("user"):null;
+  db=window.claude?await claude.use("db"):null;
+  if(!db){$("role").textContent="Signed out";$("note").style.display="block";$("note").textContent="Please tap Login to sign in to claude.ai, then reload this page to see live stock and sales.";return}
+  try{canAdmin=!!(user&&await user.canEdit())}catch(e){}
+  let off=false,un=false;try{off=sessionStorage.getItem("seko_out")==="1";un=sessionStorage.getItem("seko_unlock")==="1"}catch(e){}
+  isAdmin=canAdmin&&un;setView();
+  try{uid=user?await user.id():null}catch(e){}
+  if(canAdmin)chatAdminStart();
+  document.body.classList.toggle("admin",isAdmin);
+  $("role").textContent=isAdmin?"Admin":"Client view";
+  db.collection("products").onSnapshot(s=>{prods=s.docs.map(d=>({id:d.id,...d.data()}));renderProds()},fail);
+  db.doc("shop/pay").onSnapshot(s=>{payinfo=s.exists?(s.data().text||""):"";$("lhow").value=payinfo;$("lpay").textContent=payinfo?"How to pay: "+payinfo:""},fail);
+  db.doc("shop/info").onSnapshot(s=>{hours=s.exists?s.data():null;if(hours){$("ho").value=hours.open;$("hc").value=hours.close;$("hm").value=hours.mode||"auto"}renderShop()},fail);
+  db.collection("fundis").onSnapshot(s=>{fundis=s.docs.map(d=>({id:d.id,...d.data()}));renderFundis()},fail);
+  db.collection("activity").orderBy("at","desc").limit(12).onSnapshot(s=>{
+   $("act").innerHTML=s.docs.length?s.docs.map(d=>{const a=d.data();return `<div class="row"><span>${esc(a.text)}</span><small style="color:var(--muted)">${new Date(a.at).toLocaleString([],{dateStyle:"short",timeStyle:"short"})}</small> <button class="s" data-a="${d.id}">Delete</button></div>`}).join(""):'<div class="empty">Nothing yet</div>'},fail);
+  if(canAdmin){
+   db.collection("lipa").onSnapshot(s=>{plans=s.docs.map(d=>({id:d.id,...d.data()}));renderPlans()},fail);
+   db.collection("costs").onSnapshot(s=>{costs={};s.docs.forEach(d=>costs[d.id]=d.data().buy||0);renderProds()},fail);
+   db.collection("orders").orderBy("date","desc").onSnapshot(s=>{orders=s.docs.map(d=>({id:d.id,...d.data()}));render()},fail);
+   checkLocal();
+  }
+ }catch(e){fail(e)}
+}
+
+function renderProds(){
+ const q=$("pq").value.toLowerCase().trim();
+ $("plist").innerHTML=prods.map(p=>`<option value="${esc(p.name)}">`).join("");
+ const l=prods.filter(p=>(p.name+" "+(p.no||"")).toLowerCase().includes(q));
+ $("pres").innerHTML=l.length?l.map(p=>`<div class="prod"><span><b>${esc(p.name)}</b>${p.no?"<br><small>"+esc(p.no)+"</small>":""}</span><span style="text-align:right">${fmt(p.price)}<br><small class="am">Buy ${fmt(costs[p.id])} · Profit ${fmt(p.price-(costs[p.id]||0))}<br></small><span class="badge ${p.stock>0?"in":"out"}">${p.stock>0?"In stock ("+p.stock+")":"Out of stock"}</span> <button class="s" data-e="${p.id}">Edit</button> <button class="s" data-p="${p.id}">Remove</button></span></div>`).join(""):`<div class="empty">${prods.length?"No matching part found":"No products yet."}</div>`;
+}
+
+function render(){
+ const q=$("q").value.toLowerCase(),today=new Date().toDateString();
+ let t=0,td=0,un=0,pf=0,tpf=0,it=0;
+ orders.forEach(o=>{t+=o.total;pf+=o.profit||0;it+=o.qty;if(new Date(o.date).toDateString()===today){td+=o.total;tpf+=o.profit||0}if(o.pay==="Pending")un+=o.total});
+ $("sToday").textContent=fmt(td);$("sTotal").textContent=fmt(t);$("sCount").textContent=orders.length;$("sUnpaid").textContent=fmt(un);
+ $("sProfit").textContent=fmt(pf);$("sTProfit").textContent=fmt(tpf);$("sItems").textContent=it;
+ const days=[];for(let i=6;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);days.push({k:d.toDateString(),l:d.toLocaleDateString(undefined,{weekday:"short"}),v:0})}
+ orders.forEach(o=>{const x=days.find(d=>d.k===new Date(o.date).toDateString());if(x)x.v+=o.total});
+ const mx=Math.max(1,...days.map(d=>d.v));
+ $("chart").innerHTML=days.map(d=>`<div class="bar" title="${fmt(d.v)}"><i style="height:${d.v/mx*80}%"></i>${d.l}</div>`).join("");
+ const tp={};orders.forEach(o=>{tp[o.part]=tp[o.part]||{q:0,v:0};tp[o.part].q+=o.qty;tp[o.part].v+=o.total});
+ const tl=Object.entries(tp).sort((a,b)=>b[1].v-a[1].v).slice(0,5);
+ $("top").innerHTML=tl.length?tl.map(([n,x])=>`<div class="row"><span>${esc(n)} <small>×${x.q}</small></span><b>${fmt(x.v)}</b></div>`).join(""):'<div class="empty">No sales yet</div>';
+ const list=orders.filter(o=>((o.part||"")+" "+(o.pno||"")+" "+(o.cust||"")+" "+(o.ph||"")).toLowerCase().includes(q));
+ $("rows").innerHTML=list.length?list.map(o=>`<tr><td><input type="checkbox" data-s="${o.id}"${sel.has(o.id)?" checked":""}></td><td>${new Date(o.date).toLocaleDateString()}</td><td><b>${esc(o.part)}</b>${o.pno?"<br><small>"+esc(o.pno)+"</small>":""}</td><td>${esc(o.cust||"-")}${o.ph?"<br><small>"+esc(o.ph)+"</small>":""}</td><td>${o.qty}</td><td>${fmt(o.price)}</td><td>${fmt(o.total)}</td><td>${fmt(o.profit)}</td><td><span class="pill ${o.pay}" data-t="${o.id}">${o.pay}</span></td><td><button class="s" data-d="${o.id}">Delete</button></td></tr>`).join(""):`<tr><td colspan="10" class="empty">No orders yet</td></tr>`;
+}
+
+function calc(){const q=+$("qty").value||0,p=+$("price").value||0,b=+$("bp").value||0;$("tot").textContent=fmt(q*p);$("prf").textContent=fmt(q*(p-b))}
+$("qty").oninput=$("price").oninput=$("bp").oninput=calc;
+$("q").oninput=render;$("pq").oninput=renderProds;
+$("part").oninput=()=>{const p=prods.find(x=>x.name.toLowerCase()===$("part").value.trim().toLowerCase());if(p){$("price").value=p.price;$("bp").value=costs[p.id]||"";if(!$("pno").value)$("pno").value=p.no||"";calc()}};
+
+$("add").onclick=async()=>{
+ const part=$("part").value.trim(),qty=+$("qty").value,price=+$("price").value;
+ if(!part||qty<1||$("price").value===""){msg("Enter part name, quantity and price.");return}
+ const p=prods.find(x=>x.name.toLowerCase()===part.toLowerCase());
+ if(p&&qty>p.stock){msg("Only "+p.stock+" in stock for "+p.name+".");return}
+ const buy=+$("bp").value||0;
+ $("add").disabled=true;msg("");
+ try{
+  await db.collection("orders").add({part,pno:$("pno").value.trim(),cust:$("cust").value.trim(),ph:$("ph").value.trim(),qty,price,buy,total:qty*price,profit:qty*(price-buy),pay:$("pay").value,date:Date.now(),pid:p?p.id:""});
+  if(p){const left=p.stock-qty;
+   if(left<=0){await db.doc("products/"+p.id).delete();act(part+" ×"+qty+" sold · sold out");msg(p.name+" is sold out and was removed from the catalog.")}
+   else{await db.doc("products/"+p.id).update({stock:left});act(part+" ×"+qty+" sold · "+left+" left");msg(p.name+": "+left+" left in stock.")}
+  }else act(part+" ×"+qty+" sold");
+  ["part","pno","cust","ph","price","bp"].forEach(i=>$(i).value="");$("qty").value=1;calc();
+ }catch(e){msg("Could not save: "+((e&&e.code)||"error"))}
+ $("add").disabled=false;
+};
+
+$("cadd").onclick=async()=>{
+ const name=$("cn").value.trim();if(!name||$("cpr").value===""){alert("Enter part name and price");return}
+ const id=editId||db.collection("products").doc().id;
+ try{
+  await db.doc("products/"+id).set({name,no:$("cp").value.trim(),price:+$("cpr").value,stock:+$("cs").value||0});
+  await db.doc("costs/"+id).set({buy:+$("cb").value||0});
+  if(!editId)act(name+" added to stock ("+(+$("cs").value||0)+" available)");
+  editId=null;$("cadd").textContent="Add product";
+  ["cn","cp","cb","cpr"].forEach(i=>$(i).value="");$("cs").value=1;
+ }catch(e){alert("Could not save: "+((e&&e.code)||"error"))}
+};
+
+$("pres").onclick=async e=>{
+ const ed=e.target.dataset.e,rm=e.target.dataset.p;
+ if(ed){const p=prods.find(x=>x.id===ed);if(p){editId=p.id;$("cn").value=p.name;$("cp").value=p.no||"";$("cb").value=costs[p.id]||"";$("cpr").value=p.price;$("cs").value=p.stock;$("cadd").textContent="Save changes";$("mg").open=true;$("cn").scrollIntoView({block:"center"})}}
+ if(rm&&confirm("Remove this product?")){try{await db.doc("products/"+rm).delete();await db.doc("costs/"+rm).delete()}catch(x){}}
+};
+
+$("rows").onclick=async e=>{
+ const d=e.target.dataset.d,t=e.target.dataset.t;
+ try{
+  if(t){const o=orders.find(o=>o.id===t);await db.doc("orders/"+t).update({pay:o.pay==="Paid"?"Pending":"Paid"})}
+  if(d&&confirm("Delete this order? Its stock will be put back.")){
+   const o=orders.find(o=>o.id===d);
+   if(o&&o.pid){const ps=await db.doc("products/"+o.pid).get();
+    if(ps.exists)await db.doc("products/"+o.pid).update({stock:(ps.data().stock||0)+o.qty});
+    else{await db.doc("products/"+o.pid).set({name:o.part,no:o.pno||"",price:o.price,stock:o.qty});await db.doc("costs/"+o.pid).set({buy:o.buy||0})}}
+   await db.doc("orders/"+d).delete();
+  }
+ }catch(x){alert("Could not complete: "+((x&&x.code)||"error"))}
+};
+
+let lp=[],lo=[];
+function checkLocal(){
+ try{lp=JSON.parse(localStorage.getItem("autospare_prods")||"[]");lo=JSON.parse(localStorage.getItem("autospare_orders")||"[]")}catch(e){}
+ if(lp.length||lo.length){$("imp").style.display="block";$("impt").textContent="This browser has "+lo.length+" saved orders and "+lp.length+" products from the earlier version. Import them so everyone sees the same data."}
+}
+$("impb").onclick=async()=>{
+ $("impb").disabled=true;
+ try{
+  for(const p of lp){const id=db.collection("products").doc().id;await db.doc("products/"+id).set({name:p.name,no:p.no||"",price:p.price,stock:p.stock||0});await db.doc("costs/"+id).set({buy:p.buy||0})}
+  for(const o of lo){await db.collection("orders").add({part:o.part,pno:o.pno||"",cust:o.cust||"",ph:o.ph||"",qty:o.qty,price:o.price,buy:o.buy||0,total:o.total,profit:o.profit||0,pay:o.pay||"Paid",date:Date.parse(o.date)||Date.now(),pid:""})}
+  try{localStorage.removeItem("autospare_prods");localStorage.removeItem("autospare_orders")}catch(e){}
+  $("imp").style.display="none";
+ }catch(e){alert("Import failed: "+((e&&e.code)||"error"));$("impb").disabled=false}
+};
+
+function setView(){document.body.classList.toggle("admin",isAdmin);$("role").textContent=isAdmin?"Admin":"Client view";$("lg").textContent=isAdmin?"Logout":"Admin login";renderFundis();renderProds()}
+$("lg").onclick=()=>{
+ if(!db){window.open("https://claude.ai/login","_blank");return}
+ if(isAdmin){isAdmin=false;try{sessionStorage.removeItem("seko_unlock")}catch(e){}setView();return}
+ if(canAdmin){openPw();return}
+ alert("Admin access is only for the shop owner. Ask the owner to invite you as an editor.")
+};
+function renderFundis(){
+ $("fl").innerHTML=fundis.length?fundis.map(f=>{const tel=String(f.phone||"").replace(/[^0-9+]/g,"");return `<div class="prod"><span><b>${esc(f.name)}</b>${f.skill?"<br><small>"+esc(f.skill)+"</small>":""}<br><a href="tel:${tel}" style="color:var(--brand)">📞 ${esc(f.phone)}</a></span><span style="text-align:right"><span class="badge ${f.on?"in":"out"}"${isAdmin?` data-f="${f.id}" style="cursor:pointer"`:""}>${f.on?"Available":"Not available"}</span><br><button class="s" data-fe="${f.id}">Edit</button> <button class="s" data-fd="${f.id}">Remove</button></span></div>`}).join(""):'<div class="empty">No fundis listed yet</div>'}
+$("fl").onclick=async e=>{
+ const t=e.target.dataset;
+ try{
+  if(t.f){const f=fundis.find(x=>x.id===t.f);await db.doc("fundis/"+t.f).update({on:!f.on})}
+  if(t.fe){const f=fundis.find(x=>x.id===t.fe);if(f){editF=f.id;$("fn").value=f.name;$("fp").value=f.phone||"";$("fs").value=f.skill||"";$("fadd").textContent="Save changes";$("fm").open=true;$("fn").scrollIntoView({block:"center"})}}
+  if(t.fd&&confirm("Remove this fundi?"))await db.doc("fundis/"+t.fd).delete();
+ }catch(x){alert("Could not complete: "+((x&&x.code)||"error"))}
+};
+$("fadd").onclick=async()=>{
+ const name=$("fn").value.trim(),phone=$("fp").value.trim();
+ if(!name||!phone){alert("Enter the fundi's name and phone number");return}
+ try{
+  if(editF)await db.doc("fundis/"+editF).update({name,phone,skill:$("fs").value.trim()});
+  else await db.collection("fundis").add({name,phone,skill:$("fs").value.trim(),on:true});
+  editF=null;$("fadd").textContent="Add fundi";["fn","fp","fs"].forEach(i=>$(i).value="");
+ }catch(x){alert("Could not save: "+((x&&x.code)||"error"))}
+};
+const t12=s=>{const[h,m]=s.split(":").map(Number);return new Date(2000,0,1,h,m).toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})};
+function renderShop(){
+ const el=$("shopbar");
+ if(!hours){el.style.display="none";return}
+ const[oh,om]=hours.open.split(":").map(Number),[ch,cm]=hours.close.split(":").map(Number),n=new Date(),now=n.getHours()*60+n.getMinutes(),o=oh*60+om,c=ch*60+cm;
+ let on=o<=c?(now>=o&&now<c):(now>=o||now<c);
+ if(hours.mode==="open")on=true;else if(hours.mode==="closed")on=false;
+ el.className="shop "+(on?"on":"off");el.style.display="flex";
+ el.innerHTML=`<span>${on?"🟢 Shop is OPEN":"🔴 Shop is CLOSED"}</span><small>Hours: ${t12(hours.open)} – ${t12(hours.close)}${hours.mode&&hours.mode!=="auto"?" · set by the shop":""}</small>`;
+}
+setInterval(renderShop,60000);
+$("hs").onclick=async()=>{
+ if(!$("ho").value||!$("hc").value){alert("Set the opening and closing time");return}
+ const mode=$("hm").value,prev=hours?(hours.mode||"auto"):"auto";
+ try{
+  await db.doc("shop/info").set({open:$("ho").value,close:$("hc").value,mode});
+  if(mode!==prev&&mode!=="auto")act(mode==="open"?"Shop is OPEN now":"Shop is CLOSED now");
+ }catch(x){alert("Could not save: "+((x&&x.code)||"error"))}
+};
+$("act").onclick=async e=>{const a=e.target.dataset.a;if(a&&confirm("Delete this activity record?")){try{await db.doc("activity/"+a).delete()}catch(x){alert("Could not delete: "+((x&&x.code)||"error"))}}};
+$("aclr").onclick=async()=>{if(!confirm("Delete ALL activity records? This cannot be undone."))return;try{const s=await db.collection("activity").get();for(const d of s.docs)await db.doc("activity/"+d.id).delete()}catch(x){alert("Could not delete: "+((x&&x.code)||"error"))}};
+let sel=new Set();
+$("rows").onchange=e=>{const s=e.target.dataset.s;if(s){e.target.checked?sel.add(s):sel.delete(s)}};
+$("selall").onchange=e=>{document.querySelectorAll("#rows [data-s]").forEach(c=>{c.checked=e.target.checked;e.target.checked?sel.add(c.dataset.s):sel.delete(c.dataset.s)})};
+async function delOrders(ids,label){
+ if(!ids.length){alert("Nothing selected");return}
+ if(!confirm("Delete "+label+" ("+ids.length+" records)? Stock is NOT put back and this cannot be undone."))return;
+ try{for(const id of ids)await db.doc("orders/"+id).delete();sel.clear();$("selall").checked=false}catch(x){alert("Could not delete: "+((x&&x.code)||"error"))}
+}
+$("dsel").onclick=()=>delOrders([...sel].filter(id=>orders.some(o=>o.id===id)),"the selected sales records");
+$("dall").onclick=()=>delOrders(orders.map(o=>o.id),"ALL sales records");
+let plans=[],payinfo="";
+const codeGen=()=>Array.from(crypto.getRandomValues(new Uint8Array(6))).map(b=>"ABCDEFGHJKLMNPQRSTUVWXYZ23456789"[b%32]).join("");
+const paidOf=p=>(p.pays||[]).reduce((a,x)=>a+x.a,0);
+async function syncTrack(id,p){const paid=paidOf(p);await db.doc("track/"+id).set({item:p.item,total:p.total,paid,balance:Math.max(0,p.total-paid),pays:(p.pays||[]).slice(-5),at:Date.now()})}
+function renderPlans(){$("lrows").innerHTML=plans.length?plans.map(p=>{const pd=paidOf(p),b=Math.max(0,p.total-pd);return `<tr><td><b>${esc(p.id)}</b></td><td>${esc(p.name)}<br><small>${esc(p.phone||"")}</small></td><td>${esc(p.item)}</td><td>${fmt(p.total)}</td><td>${fmt(pd)}</td><td>${b?fmt(b):"✅ Cleared"}</td><td>${b?`<button class="s" data-lp="${p.id}">Add payment</button> `:""}<button class="s" data-ld="${p.id}">Delete</button></td></tr>`}).join(""):'<tr><td colspan="7" class="empty">No plans yet</td></tr>'}
+$("ladd").onclick=async()=>{
+ const name=$("ln").value.trim(),item=$("li").value.trim(),total=+$("lt").value,dep=+$("ld").value||0;
+ if(!name||!item||!(total>0)){alert("Enter client name, item and total price");return}
+ if(dep>total){alert("Deposit cannot be more than the total");return}
+ const id=codeGen(),p={name,phone:$("lph").value.trim(),item,total,pays:dep>0?[{a:dep,at:Date.now()}]:[],created:Date.now()};
+ try{await db.doc("lipa/"+id).set(p);await syncTrack(id,p);["ln","lph","li","lt"].forEach(i=>$(i).value="");$("ld").value=0;alert("Plan created. Give the client this code: "+id)}catch(x){alert("Could not save: "+((x&&x.code)||"error"))}
+};
+$("lrows").onclick=async e=>{
+ const lp=e.target.dataset.lp,ld=e.target.dataset.ld;
+ try{
+  if(lp){const p=plans.find(x=>x.id===lp),left=p.total-paidOf(p),a=+prompt("Amount paid now (balance "+fmt(left)+")");
+   if(!(a>0))return;if(a>left){alert("That is more than the balance.");return}
+   p.pays=[...(p.pays||[]),{a,at:Date.now()}];await db.doc("lipa/"+lp).update({pays:p.pays});await syncTrack(lp,p)}
+  if(ld&&confirm("Delete this plan? The client will no longer be able to check it.")){await db.doc("lipa/"+ld).delete();await db.doc("track/"+ld).delete()}
+ }catch(x){alert("Could not complete: "+((x&&x.code)||"error"))}
+};
+$("lhowb").onclick=async()=>{try{await db.doc("shop/pay").set({text:$("lhow").value.trim()})}catch(x){alert("Could not save: "+((x&&x.code)||"error"))}};
+$("lcb").onclick=async()=>{
+ if(!db){alert("Please sign in to claude.ai first");return}
+ const c=$("lc").value.trim().toUpperCase();if(!c)return;
+ try{
+  const s=await db.doc("track/"+c).get();
+  if(!s.exists){$("lres").innerHTML='<div class="empty">Code not found. Please check it with the shop.</div>';return}
+  const t=s.data(),pct=Math.min(100,t.total?t.paid/t.total*100:0);
+  $("lres").innerHTML=`<div class="prod"><span><b>${esc(t.item)}</b><br><small>Total ${fmt(t.total)}</small></span><span style="text-align:right">Paid ${fmt(t.paid)}<br><b>${t.balance?"Balance "+fmt(t.balance):"✅ Fully paid"}</b></span></div><div style="height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin:8px 0"><i style="display:block;height:100%;width:${pct}%;background:var(--ok)"></i></div>`+(t.pays||[]).map(x=>`<div class="row"><span>Payment</span><span>${fmt(x.a)} · ${new Date(x.at).toLocaleDateString()}</span></div>`).join("");
+ }catch(x){$("lres").innerHTML='<div class="empty">Could not check right now.</div>'}
+};
+let uid=null,chatUnsub=null,openT=null,threads=[];
+const getName=()=>{try{return localStorage.getItem("seko_chat_name")||""}catch(e){return""}};
+function chatMode(){
+ const adm=isAdmin;
+ $("chatList").style.display=adm&&!openT?"block":"none";
+ $("chatMsgs").style.display=adm&&!openT?"none":"block";
+ $("chatForm").style.display=adm&&!openT?"none":"flex";
+ $("chatName").style.display=!adm&&!getName()?"block":"none";
+ $("chatBack").style.display=adm&&openT?"inline-block":"none";
+ $("chatTitle").textContent=adm?(openT?((threads.find(t=>t.id===openT)||{}).name||"Client"):"Customer chats"):"Chat with the shop";
+}
+function renderThreads(){$("chatList").innerHTML=threads.length?threads.map(t=>`<div class="prod" data-t="${t.id}" style="cursor:pointer;padding:10px"><span><b>${esc(t.name||"Client")}</b><br><small>${esc(t.last||"")}</small></span>${t.from==="client"?'<span class="badge out">Reply</span>':""}</div>`).join(""):'<div class="empty">No chats yet</div>'}
+function chatAdminStart(){db.collection("chat").orderBy("at","desc").onSnapshot(s=>{threads=s.docs.map(d=>({id:d.id,...d.data()}));const w=threads.filter(t=>t.from==="client").length;$("chatBtn").textContent=w?"💬 "+w:"💬";$("msgSum").textContent=threads.length?(w?w+" chat(s) waiting for your reply":"All chats answered")+" · "+threads.length+" in total":"No messages yet.";if(isAdmin&&!openT)renderThreads()},fail)}
+function watchChat(id){
+ if(chatUnsub){chatUnsub();chatUnsub=null}
+ if(!id){$("chatMsgs").innerHTML='<div class="empty">Please sign in to claude.ai to chat with the shop.</div>';return}
+ chatUnsub=db.collection("chat/"+id+"/msgs").orderBy("at","asc").limit(100).onSnapshot(s=>{
+  const mine=isAdmin?"admin":"client";
+  $("chatMsgs").innerHTML=s.docs.length?s.docs.map(d=>{const m=d.data();return `<div class="m ${m.from===mine?"me":""}">${esc(m.text)}</div>`}).join(""):'<div class="empty">Say hello 👋 The shop will reply here.</div>';
+  $("chatMsgs").scrollTop=$("chatMsgs").scrollHeight
+ },()=>{$("chatMsgs").innerHTML='<div class="empty">Chat is not enabled for your account yet. Please call the shop.</div>'})
+}
+$("chatBtn").onclick=()=>{
+ const b=$("chatBox");b.classList.toggle("on");if(!b.classList.contains("on"))return;
+ if(!db){alert("Please sign in to claude.ai to chat");b.classList.remove("on");return}
+ if(isAdmin){openT=null;if(chatUnsub){chatUnsub();chatUnsub=null}renderThreads()}else watchChat(uid);
+ chatMode();
+};
+$("chatX").onclick=()=>$("chatBox").classList.remove("on");
+$("chatBack").onclick=()=>{openT=null;if(chatUnsub){chatUnsub();chatUnsub=null}renderThreads();chatMode()};
+$("chatList").onclick=e=>{const r=e.target.closest("[data-t]");if(r){openT=r.dataset.t;watchChat(openT);chatMode()}};
+$("chatSend").onclick=async()=>{
+ const text=$("chatIn").value.trim();if(!text)return;
+ const at=Date.now();
+ try{
+  if(isAdmin){if(!openT)return;await db.collection("chat/"+openT+"/msgs").add({from:"admin",text,at});await db.doc("chat/"+openT).update({last:text,at,from:"admin"})}
+  else{
+   if(!uid){alert("Please sign in to claude.ai to chat");return}
+   const name=$("chatNm").value.trim()||getName();if(!name){alert("Please enter your name");return}
+   try{localStorage.setItem("seko_chat_name",name)}catch(e){}
+   await db.doc("chat/"+uid).set({name,last:text,at,from:"client"});
+   await db.collection("chat/"+uid+"/msgs").add({from:"client",text,at});chatMode()
+  }
+  $("chatIn").value="";
+ }catch(x){alert(x&&x.code==="invalid_argument"?"Chat is not enabled for your account yet. Please call the shop.":"Could not send. Please try again.")}
+};
+$("chatIn").onkeydown=e=>{if(e.key==="Enter")$("chatSend").click()};
+$("msgOpen").onclick=()=>{if(!$("chatBox").classList.contains("on"))$("chatBtn").click()};
+const PWH="b8eaa1e0d3b698b6fdc2793b0cff44272fcd5c44ee58871f7402b64a4f1204ee";let bad=0;
+async function sha(s){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode("seko-moiben:"+s));return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,"0")).join("")}
+function openPw(){$("pw").value="";$("pwe").textContent="";$("pwm").classList.add("on");$("pw").focus()}
+$("pwx").onclick=()=>$("pwm").classList.remove("on");
+$("pwgo").onclick=async()=>{
+ if(bad>=5){$("pwe").textContent="Too many wrong attempts. Reload the page to try again.";return}
+ if(await sha($("pw").value)!==PWH){bad++;$("pwe").textContent="Wrong password.";return}
+ $("pwm").classList.remove("on");isAdmin=true;try{sessionStorage.setItem("seko_unlock","1")}catch(e){}setView()
+};
+$("pw").onkeydown=e=>{if(e.key==="Enter")$("pwgo").click()};
+calc();init();
+</script>
+</body>
+</html>
